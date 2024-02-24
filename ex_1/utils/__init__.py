@@ -1,0 +1,2 @@
+from .convert_docx import convert_docx_to_pdf_for_linux, convert_docx_to_pdf_for_windows
+from .convert_xlsx import convert_xlsx_file_for_linux, convert_xlsx_to_pdf_for_windows

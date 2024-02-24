@@ -1,0 +1,2 @@
+2024-02-24 23:48:32,868 - INFO - Conversion successful: ex_1/test_files/xlsx_file.xlsx -> ex_1/converted_files
+2024-02-24 23:50:02,841 - INFO - Conversion successful: ex_1/test_files/docx_file.docx -> ex_1/converted_files
