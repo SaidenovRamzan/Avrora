@@ -7,7 +7,7 @@ from reportlab.lib.units import inch
 from reportlab.pdfgen import canvas
 
 
-def convert_xlsx_file_for_linux(xlsx_file, output_dir):
+def convert_xlsx_to_pdf_for_linux(xlsx_file, output_dir):
     try:
         command = [
             "libreoffice",

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% block link %}{% endblock link %}
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-controls">
+            {% if not user.is_authenticated %}
+                <a href="{% url 'login' %}">
+                    <button type="button" class="btn btn-outline-success">Войти</button>
+                </a>
+            {% else %}
+                <a href="{% url 'document_list' %}">
+                    <button type="button" class="btn btn-outline-success">Чат</button>
+                </a>
+                <a href="{% url 'document_create' %}">
+                    <button type="button" class="btn btn-outline-success">Добавить книгу</button>
+                </a>
+                <a href="{% url 'logout' %}">
+                    <button type="button" class="btn btn-outline-success">Выйти</button>
+                </a>
+            {% endif %}
+        </div>
+    </div>
+    {% block content %}{% endblock %}
+</body>
+
+</html>

@@ -1,7 +1,12 @@
 import os
 import logging
 from tkinter import messagebox
-from utils import convert_docx_to_pdf_for_linux, convert_xlsx_to_pdf_for_windows
+from utils import (
+    convert_docx_to_pdf_for_windows,
+    convert_xlsx_to_pdf_for_windows,
+    convert_docx_to_pdf_for_linux,
+    convert_xlsx_to_pdf_for_linux,
+)
 
 
 def main(input_file):
