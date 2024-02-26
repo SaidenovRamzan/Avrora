@@ -14,3 +14,6 @@ class Document(models.Model):
     description = models.TextField()
     file = models.FileField(upload_to="documents/")
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self) -> str:
+        return self.name

@@ -2,4 +2,4 @@ docx2pdf==0.1.8
 openpyxl==3.1.2
 reportlab==4.1.0
 
-Django==5.0.2
+Django==3.2.2

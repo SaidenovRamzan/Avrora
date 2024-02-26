@@ -1,0 +1,16 @@
+{% csrf_token %}
+{% for field in form %}
+    <div class="form-group">
+      <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+      {% if form.is_bound %}
+        {% if field.errors %}
+          <ul class="errors">
+            {% for error in field.errors %}
+              <li><small class="form-text text-danger">{{ error }}</small></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endif %}
+      {{ field }}
+    </div>
+  {% endfor %}

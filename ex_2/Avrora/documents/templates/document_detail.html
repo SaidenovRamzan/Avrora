@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">{{ document.name }}</h5>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Description: {{ document.description }}</p>
+            <p class="card-text">Uploaded by: {{ document.user }}</p>
+            <p class="card-text">Uploaded at: {{ document.created_at }}</p>
+            <a href="{{ document.file.url }}" class="btn btn-primary">Download File</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

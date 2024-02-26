@@ -4,24 +4,14 @@
     <div class="container">
         <h2>Login</h2>
         <form method="post" action="{% url 'login' %}">
-            {% csrf_token %}
-            <div class="form-group">
-                {% if form.errors %}
-                    <small class="form-text text-danger">{{ form.errors }}</small>
-                {% endif %}
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
-                {% if form.email.errors %}
-                    <small id="emailHelp" class="form-text text-danger">{{ form.email.errors }}</small>
-                {% endif %}
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
-                {% if form.password.errors %}
-                    <small class="form-text text-danger">{{ form.password.errors }}</small>
-                {% endif %}
-            </div>
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li class="{{ message.tags }}"><small class="form-text text-danger">{{ message }}</small></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            {% include 'forms.html' %}
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
