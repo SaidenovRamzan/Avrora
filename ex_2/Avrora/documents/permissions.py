@@ -11,9 +11,7 @@ class IsAuthorOrSuperuser(AccessMixin):
 
     def dispatch(self, request, *args, **kwargs):
         author = self.get_object().user
-        print(
-            f"{author}, {request.user}, {not request.user.is_superuser or (request.user != author)} {'='*50}"
-        )
+
         if not request.user.is_superuser:
             if request.user != author:
                 raise PermissionDenied(self.permission_denied_message)
