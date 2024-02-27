@@ -19,7 +19,7 @@ def main(input_file):
     output_dir = "ex_1/converted_files"
 
     if file_ext == ".docx":
-        convert_docx_to_pdf_for_linux(input_file, output_dir)
+        convert_docx_to_pdf_for_windows(input_file, output_dir)
     elif file_ext == ".xlsx":
         convert_xlsx_to_pdf_for_windows(input_file, output_dir)
     else:

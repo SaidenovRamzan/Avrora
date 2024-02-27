@@ -28,7 +28,6 @@ class CustomLoginView(View):
 class CustomLogoutView(View):
     def get(self, request):
         logout(request)
-        messages.success(request, "You have been successfully logged out.")
         return redirect("/")
 
 

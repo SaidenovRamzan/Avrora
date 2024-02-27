@@ -8,7 +8,7 @@
 
 ## Примечание 
 
-Я использовал Linux в течение примерно года из-за требований сервера, который работал под управлением Linux. Из-за несовместимости с документами, даже после попыток использования образа Windows в Docker, мне пришлось разработать 4 функции для конвертации файлов: две для Linux (`convert_docx_to_pdf_for_linux`, `convert_xlsx_to_pdf_for_linux`) и две для Windows (`convert_docx_to_pdf_for_windows`, `convert_xlsx_to_pdf_for_windows`).
+Я использовал Linux в течение примерно года из-за требований сервера, который работал под управлением Linux. Из-за несовместимости с документами, даже после попыток использования образа Windows в Docker, мне пришлось разработать 4 функции для конвертации файлов: две для Linux (`convert_docx_to_pdf_for_linux`, `convert_xlsx_to_pdf_for_linux`) и две для Windows (`convert_docx_to_pdf_for_windows`, `convert_xlsx_to_pdf_for_windows`). *Вам нужно выбрать функцию, которая нужна в `main.py`*
 
 ## Запуск
 
